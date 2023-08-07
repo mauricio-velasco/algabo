@@ -41,14 +41,21 @@
 \date{}
 
 \begin{document}
-\title{Pr\'actico 1 ALGABO: Grafos, BFS, DFS.}
+\title{Pr\'actico 1 ALGABO: Grafos y BFS.}
 \author{Mauricio Velasco}
 \maketitle{}
 \begin{enumerate} 
 \item Implemente una clase \texttt{Grafo} que represente un grafo dirigido \texttt{G} como lista de adyacencia. La clase debe recibe sólo el número de vértices del grafo e implementar las operaciones \verb G.nueva_arista(i,j) , \verb G.nuevo_vertice() y \verb G.print().
 \begin{enumerate}
 \item Escriba el c\'odigo de su implementaci\'on.
-\item Demuestre que un grafo con $n$ v\'ertices y $m$ aristas puede representarse usando $O(m+n)$ n\'umeros enteros. 
+\item Cu\'anta memoria (como funci\'on de $n$) requiere su clase para representar:
+\begin{enumerate}
+\item Un grafo completo $K_n$.
+\item Un grafo bipartito completo $K_{n,n}$
+\item Un ciclo de longitud $n$.
+\item Un \'arbol con $n$ v\'ertices.
+\end{enumerate} 
+
 \end{enumerate}
 
 \item Visitamos todos los v\'ertices del grafo del dibujo usando BFS iniciando en el v\'ertice $(2)$.
@@ -56,30 +63,27 @@
 \item Escriba la lista de v\'ertices en el orden en el que los visitar\'iamos.
 \item Hay otro orden posible adicional al que escribi\'o en el numeral anterior?
 \item Cu\'antos \'ordenes posibles hay? Escr\'ibalos todos.
-\item *Generalizado el ejemplo anterior, cu\'antos \'ordenes BFS hay para recorrer un \'arbol binario con $\ell$ niveles?
+\item Generalizado el ejemplo anterior, cu\'antos \'ordenes BFS cree que hay para recorrer un \'arbol binario con $\ell$ niveles?.
 \end{enumerate}
 
-\item Implemente una funci\'on que reciba un \texttt{Grafo} $H$ y el \'indice de un v\'ertice de $H$ y retorne un árbol breadth-first-search $T$ para $H$. El árbol $T$ debe ser una instancia de la clase \texttt{Grafo}.
+\item Sea $A$ la matriz de adyacencia de un grafo $G$. Demuestre que para cualquier entero positivo $k$ y para cualquier par de v\'ertices $i,j$ se tiene que $(A^{k})_{ij}$ es igual al n\'umero de caminos desde $i$ hasta $j$ de longitud $k$.
 
-\begin{enumerate}
-\item Escriba el c\'odigo de su implementaci\'on.
-\item Utilice su implementaci\'on en el grafo del problema $(2)$ y dibuje el \'arbol $T$ obtenido.
-\end{enumerate}
-
-\item{Demuestre las siguientes afirmaciones:
+\item{Recuerde que un \'arbol es, por definici\'on, un grafo conexo y sin ciclos. Demuestre las siguientes afirmaciones:
 \begin{enumerate}
 \item Si $G$ es un grafo con $n$ v\'ertices y $m$ aristas entonces $m=O(n^2)$.
 \item Todo \'arbol con $n$ v\'ertices tiene $n-1$ aristas.
 \item Concluya que si $G$ es un grafo conexo con $m$ v\'ertices entonces $m=\Omega(n)$ y $m=O(n^2)$.
 \end{enumerate}
 }
-\item Implemente una funci\'on que reciba un \texttt{Grafo} $H$ y el \'indice de un v\'ertice de $H$ y retorne la lista de v\'ertices recorrida en Depth-First-Search (DFS)
+
+
+\item Implemente una funci\'on que reciba un \texttt{Grafo} $H$ y el \'indice de un v\'ertice de $H$ y retorne un árbol breadth-first-search $T$ para $H$. El árbol $T$ debe ser una instancia de la clase \texttt{Grafo} del problema $(1)$.
 
 \begin{enumerate}
 \item Escriba el c\'odigo de su implementaci\'on.
-\item Corra su c\'odigo en el grafo del problema $(2)$ de arriba y escriba la lista resultante.
-\item Es la lista de $(b)$ \'unica? Justifique su respuesta.
+\item Utilice su implementaci\'on en el grafo del problema $(2)$ y dibuje el \'arbol $T$ obtenido.
 \end{enumerate}
+
 
 \end{enumerate}
 
