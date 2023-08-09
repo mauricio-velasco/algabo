@@ -1,0 +1,75 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=cyan,
+}
+\urlstyle{same}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\newtheorem{theorem}{Teorema.}
+\newtheorem{lemma}[theorem]{Lema.}
+\newtheorem{corollary}[theorem]{Corolario.}
+\newtheorem{definition}[theorem]{Definici\'on:}
+\newtheorem{example}[theorem]{Ejemplo:}
+\newtheorem{problema}[theorem]{Problema:}
+\newtheorem{remark}[theorem]{Observaci\'on:}
+
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+%\usetheme{default}
+
+\newcommand{\pp}{\mathbb{P}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\qq}{\mathbb{Q}}
+
+\usepackage{tikz, tikz-3dplot}
+
+\definecolor{cof}{RGB}{219,144,71}
+\definecolor{pur}{RGB}{186,146,162}
+\definecolor{greeo}{RGB}{91,173,69}
+\definecolor{greet}{RGB}{52,111,72}
+
+\date{}
+
+\begin{document}
+\title{Pr\'actico 2 ALGABO: Grafos y DFS.}
+\author{Mauricio Velasco}
+\maketitle{}
+\begin{enumerate} 
+
+\item Proponga un algoritmo para listar las componentes conexas de un grafo no dirigido. Demuestre matem\'aticamente que el algoritmo que propone produce la respuesta correcta.
+
+\item Demuestre las siguientes afirmaciones:
+\begin{enumerate}
+\item En todo grafo dirigido $G$ tenemos $\sum_{v\in V(G)} n_v=|E|$ donde $n_v:=|{\rm Out}(v)|$. C\'omo cambia este enunciado para grafos no dirigidos?
+\item Todo par de v\'ertices en un \'arbol esta unido por un \'unico camino de longitud m\'inima.  
+\end{enumerate}
+
+\item Visitamos todos los v\'ertices del grafo $G$ no dirigido con $V=\{1,\dots, 7\}$ y con aristas $E$ determinadas por $(1,2), (1,3)$ $(3,7), (3,6), (2,4)$ y $(2,5)$ iniciando en el v\'ertice $(2)$.
+\begin{enumerate}
+\item Escriba la lista de v\'ertices en el orden en el que los visitar\'iamos en DFS.
+\item Hay otro orden posible adicional al que escribi\'o en el numeral anterior?
+\item Cu\'antos \'ordenes posibles hay? Escr\'ibalos todos.
+\itam Alguno de los anteriores podr\'ia aparecer en una recorrida {\bf BFS} de los v\'ertices de $G$?
+\end{enumerate}
+
+\item Haga una implementaci\'on en python de DFS-Topo.
+\begin{enumerate}
+\item Escriba su c\'odigo de la misma.
+\item Qu\'e orden topol\'ogico obtiene para el grafo con v\'ertices $s,v,w,t$ y lista de adyacencia $\{s:[v,w], v:[t], w:[t]\}$?
+\item Qu\'e hace el programa si el input es el grafo con v\'ertices $s,v,w$ y lista de adyacencia $\{s:[v], v:[w], w:[s]\}$? Explique su respuesta de manera precisa.
+\end{enumerate}
+
+\item Demuestre que un grafo dirigido que admita un orden topol\'ogico $f$ no puede contener un ciclo dirigido.
+
+\end{enumerate}
+\end{document}
