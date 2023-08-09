@@ -48,6 +48,9 @@
 
 \item Proponga un algoritmo para listar las componentes conexas de un grafo no dirigido. Demuestre matem\'aticamente que el algoritmo que propone produce la respuesta correcta.
 
+\item Dibuje un grafo dirigido $G$ cuya versi\'on no-dirigida sea conexo y que tenga tres componentes fuertemente conexas distintas (Dato curioso: Las componentes fuertemente conexas de un grado dirigido se pueden calcular en tiempo lineal usando DFS dos veces mediante el {\it algoritmo de Kosaraju}, proyecto posible?). 
+
+
 \item Demuestre las siguientes afirmaciones:
 \begin{enumerate}
 \item En todo grafo dirigido $G$ tenemos $\sum_{v\in V(G)} n_v=|E|$ donde $n_v:=|{\rm Out}(v)|$. C\'omo cambia este enunciado para grafos no dirigidos?
@@ -58,18 +61,24 @@
 \begin{enumerate}
 \item Escriba la lista de v\'ertices en el orden en el que los visitar\'iamos en DFS.
 \item Hay otro orden posible adicional al que escribi\'o en el numeral anterior?
-\item Cu\'antos \'ordenes posibles hay? Escr\'ibalos todos.
-\itam Alguno de los anteriores podr\'ia aparecer en una recorrida {\bf BFS} de los v\'ertices de $G$?
+\item Cu\'antos \'ordenes DFS posibles hay para el grafo? Escr\'ibalos todos.
 \end{enumerate}
 
-\item Haga una implementaci\'on en python de DFS-Topo.
+
+\item Sea $G$ un grafo finito dirigido.
 \begin{enumerate}
-\item Escriba su c\'odigo de la misma.
-\item Qu\'e orden topol\'ogico obtiene para el grafo con v\'ertices $s,v,w,t$ y lista de adyacencia $\{s:[v,w], v:[t], w:[t]\}$?
-\item Qu\'e hace el programa si el input es el grafo con v\'ertices $s,v,w$ y lista de adyacencia $\{s:[v], v:[w], w:[s]\}$? Explique su respuesta de manera precisa.
+\item Complete rigurosamente la siguiente definici\'on: Un orden topol\'ogico para $G$ es una funci\'on... 
+\item Demuestre que si $G$ admite un orden topol\'ogico $f$ entonces no puede contener un ciclo dirigido.
 \end{enumerate}
 
-\item Demuestre que un grafo dirigido que admita un orden topol\'ogico $f$ no puede contener un ciclo dirigido.
+
+\item Haga una implementaci\'on recursiva de \verb TopologicalSort.
+\begin{enumerate}
+\item Escriba su c\'odigo en Python de la misma.
+\item Qu\'e orden topol\'ogico obtiene para el grafo con v\'ertices $s,v,w,t$ y lista de adyacencia $\{s:[v,w], v:[t], w:[t]\}$?
+\item Qu\'e hace su implementaci\'on si el input es el grafo con v\'ertices $s,v,w$ y lista de adyacencia $\{s:[v], v:[w], w:[s]\}$? Explique su respuesta de manera precisa.
+\end{enumerate}
+
 
 \end{enumerate}
 \end{document}
