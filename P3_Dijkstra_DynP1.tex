@@ -1,0 +1,97 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=cyan,
+}
+\urlstyle{same}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\newtheorem{theorem}{Teorema.}
+\newtheorem{lemma}[theorem]{Lema.}
+\newtheorem{corollary}[theorem]{Corolario.}
+\newtheorem{definition}[theorem]{Definici\'on:}
+\newtheorem{example}[theorem]{Ejemplo:}
+\newtheorem{problema}[theorem]{Problema:}
+\newtheorem{remark}[theorem]{Observaci\'on:}
+
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+%\usetheme{default}
+
+\newcommand{\pp}{\mathbb{P}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\qq}{\mathbb{Q}}
+
+\usepackage{tikz, tikz-3dplot}
+
+\definecolor{cof}{RGB}{219,144,71}
+\definecolor{pur}{RGB}{186,146,162}
+\definecolor{greeo}{RGB}{91,173,69}
+\definecolor{greet}{RGB}{52,111,72}
+
+\date{}
+
+\begin{document}
+\title{Pr\'actico 2 ALGABO: El algoritmo de Dijkstra e intro a programaci\'on din\'amica.}
+\author{Mauricio Velasco}
+\maketitle{}
+\begin{enumerate} 
+
+\item Sea $G$ un grafo dirigido con pesos y sea $t$ un v\'ertice de $G$:
+\begin{enumerate}
+\item  Proponga una variante del algoritmo de Dijkstra para calcular las distancias {\bf hasta } $t$, es decir los valores $d_{\ell}(v,t)$ para $v\in V(G)$. 
+\item Demuestre que su algoritmo es correcto.
+\end{enumerate}
+
+\item Implemente el algoritmo de Dijkstra.
+\begin{enumerate}
+\item Escriba el c\'odigo de su implementaci\'on.
+\item Utilice su implementaci\'on para calcular 
+\end{enumerate}
+
+
+\item Proponga un algoritmo para listar las componentes conexas de un grafo no dirigido. Demuestre matem\'aticamente que el algoritmo que propone produce la respuesta correcta.
+
+\item Dibuje un grafo dirigido $G$ cuya versi\'on no-dirigida sea conexo y que tenga tres componentes fuertemente conexas distintas (Dato curioso: Las componentes fuertemente conexas de un grado dirigido se pueden calcular en tiempo lineal usando DFS dos veces mediante el {\it algoritmo de Kosaraju}, estudiar este algoritmo podr\'ia ser un proyecto de inter\'es). 
+
+
+\item Demuestre las siguientes afirmaciones:
+\begin{enumerate}
+\item En todo grafo dirigido $G$ tenemos $\sum_{v\in V(G)} n_v=|E|$ donde $n_v:=|{\rm Out}(v)|$. C\'omo cambia este enunciado para grafos no dirigidos?
+\item Todo par de v\'ertices en un \'arbol esta unido por un \'unico camino de longitud m\'inima.  
+\end{enumerate}
+
+\item Visitamos todos los v\'ertices del grafo $G$ no dirigido con $V=\{1,\dots, 7\}$ y con aristas $E$ determinadas por $(1,2), (1,3)$ $(3,7), (3,6), (2,4)$ y $(2,5)$ iniciando en el v\'ertice $(2)$.
+\begin{enumerate}
+\item Escriba la lista de v\'ertices en el orden en el que los visitar\'iamos en DFS.
+\item Hay otro orden posible adicional al que escribi\'o en el numeral anterior?
+\item Cu\'antos \'ordenes DFS posibles hay para el grafo? Escr\'ibalos todos.
+\end{enumerate}
+
+
+\item Sea $G$ un grafo finito dirigido.
+\begin{enumerate}
+\item Complete rigurosamente la siguiente definici\'on: Un orden topol\'ogico para $G$ es una funci\'on... 
+\item Demuestre que si $G$ admite un orden topol\'ogico $f$ entonces no puede contener un ciclo dirigido.
+\end{enumerate}
+
+
+\item Haga una implementaci\'on recursiva de \verb TopologicalSort.
+\begin{enumerate}
+\item Escriba su c\'odigo en Python de la misma.
+\item Qu\'e orden topol\'ogico obtiene para el grafo con v\'ertices $s,v,w,t$ y lista de adyacencia $\{s:[v,w], v:[t], w:[t]\}$?
+\item Qu\'e hace su implementaci\'on si el input es el grafo con v\'ertices $s,v,w$ y lista de adyacencia $\{s:[v], v:[w], w:[s]\}$? Explique su respuesta de manera precisa.
+\end{enumerate}
+
+
+\end{enumerate}
+\end{document}
