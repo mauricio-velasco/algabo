@@ -51,7 +51,7 @@
 \item Se $G_n$ el grafo de cadena no dirigido con v\'ertices $1,2\dots, n$ (es decir el que tiene aristas $E(G)=\{(j,j+1): j=1,\dots,n-1 \}$ y sus reversas). Suponga que $G$ tiene pesos en los v\'ertices dados por la funci\'on $w: V(G_n)\rightarrow \mathbb{R}$ especificada mediante la fórmula $w(j)=j$ para $j=1,2,\dots, n$ 
 \begin{enumerate}
 \item Cuál cree usted que es el peso m\'aximo  posible de un subconjunto independiente de vértices de $G_n$? La respuesta debe depender del \'indice $n$.
-\item Utilice la formulaci\'on del problema mediante programaci\'on din\'amica para {\it demostrar} que la respuesta que encontraron en la parte $(a)$ es correcta.
+\item Utilice la formulaci\'on del problema mediante programaci\'on din\'amica para {\it demostrar} que la respuesta que propuso en la parte $(a)$ es correcta.
 \end{enumerate}
 
 \item {\bf M\'aximo conjunto independiente.}  Sea $G$ un grafo no dirigido finito con v\'ertices $v_1,\dots , v_n$ dotado de una funci\'on de pesos $w$ definida en los v\'ertices. Recuerde que $T\subseteq V(G)$ es {\it independiente} si no hay ninguna arista de $G$ que tenga ambos extremos en $T$ y que para un grafo $G$ y un subconjunto $X\subseteq V(G)$ definimos el grafo $G\setminus X$ como aquel que tiene v\'ertices $V(G)\setminus X$ y cuyas aristas son las aristas de $G$ que tienen ambos extremos en $V(G)\setminus X$.
@@ -62,12 +62,12 @@ Demuestre que la siguiente ecuaci\'on se cumple
 \[\Lambda(G) = \max\left( \Lambda(G\setminus\{v_n\}), w(v_n) + \Lambda(G\setminus {\rm star}(v_n))\right)\]
 donde ${\rm star}(v_n)$ es el conjunto que consiste de $v_n$ y de todos los v\'ertices adyacentes a $v_n$.
 \item Proponga un algoritmo de programaci\'on din\'amica para calcular $\Lambda(G)$ usando la ecuaci\'on del rengl\'on anterior.
-\item Verdadero \'o Falso? El algoritmo propuesto permite encontrar $\Lambda(G)$ en tiempo lineal para $O(m+n)$ para {\it cualquier} grafo?
+\item Verdadero \'o Falso? El algoritmo propuesto permite encontrar $\Lambda(G)$ en tiempo lineal $O(n)$ para {\it cualquier} grafo?
 \end{enumerate}
 
 \item Considere la siguiente instancia del problema de Knapsack para un saco con capacidad $C=9$
 \[
-\begin{tabular}{ccc}
+\begin{tabular}{c|c|c}
 Item & Valor & Tama\~no \\
 \hline
 1 & 1 & 1\\
@@ -84,7 +84,7 @@ Item & Valor & Tama\~no \\
 \end{enumerate}
 
 \item Proponga un algoritmo de programaci\'on din\'amica para resolver el siguiente problema: {\it Dadas capacidades enteras positivas $C_1$ y $C_2$ y una colecci\'on de $n$ items con tama\~nos y capacidades (enteras, positivas) dadas, encuentre dos subconjuntos disjuntos de items $S_1$ y $S_2$ con valor m\'aximo total posible, entre aquellos que pueden meterse en los sacos. Es decir $(S_1,S_2)$ es un maximizador de la funci\'on $W(T_1,T_2):=\sum_{i\in T_1}w(i)+\sum_{i\in T_2}w(i)$ 
-entre las parejas $(T_1,T_2)$ de conjuntos de $[n]$ tales que $T_1\cap T_2=\emptyset$ y $\sum_{v\in T_i}\leq C_i$ para $i=1,2$.}
+entre las parejas $(T_1,T_2)$ de conjuntos de $[n]$ tales que $T_1\cap T_2=\emptyset$ y $\sum_{v\in T_i}w(v)\leq C_i$ para $i=1,2$.}
 
 \end{document}
 

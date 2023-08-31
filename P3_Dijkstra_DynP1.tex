@@ -46,20 +46,10 @@
 \maketitle{}
 \begin{enumerate} 
 
-\item Sea $G$ un grafo dirigido con pesos positivos y sea $t$ un v\'ertice de $G$:
+\item Sea $G$ un grafo dirigido con pesos positivos $\ell$ en las aristas y sea $t$ un v\'ertice de $G$:
 \begin{enumerate}
 \item  Proponga una variante del algoritmo de Dijkstra para calcular las distancias {\bf hasta } $t$, es decir los valores $d_{\ell}(v,t)$ para $v\in V(G)$. 
 \item Demuestre que su algoritmo es correcto.
-\end{enumerate}
-
-\item * Sea $G$ un grafo dirigido con pesos no negativos. Defina el costo-bottleneck de un camino $P$ como 
-\[b(P)=\text{M\'axima longitud $\ell$ de una arista de $P$}\]
-y para dos v\'ertices $u$ y $v$ defina la onstrucciones bottleneck $m(s,v)$ como
-\[m(s,v)=\min\{b(P): \text{$P$ es un camino de $s$ a $v$ en $G$}\}\]
-\begin{enumerate}
-\item Calcule $m(s,v)$ para todo $v\in V$ para el grafo $[M3]$ de clase.
-\item Proponga una variante del algoritmo de Dijkstra para calcular obstrucciones bottleneck en tiempo $O(mn)$.
-\item Demuestre la validez del algoritmo que propone.
 \end{enumerate}
 
 \item Implemente el algoritmo de Dijkstra en python dos veces, una vez usando un \verb!priority_queue! o \verb!heap! (por ejemplo usando \verb!import heapq!) y la segunda vez sin usar esta estructura de datos especial.
@@ -70,6 +60,28 @@ y para dos v\'ertices $u$ y $v$ defina la onstrucciones bottleneck $m(s,v)$ como
 \end{enumerate}
 
 \item Verdadero \'o Falso? En el primer caso escriba una demostraci\'on y en el segundo encuentre un contrajemplo: {\it Suponga que el algoritmo de Dijkstra iniciando en $s$ inserta los v\'ertices de $V(G)$ en $X$ en orden  $s=v_0,v_1,\dots, v_n$. Si $i<j$ entonces $d_{\ell}(s,v_i)\leq d_{\ell}(s,v_j)$.}
+
+
+\item Sea $G$ un grafo dirigido con pesos no negativos. Defina el costo-especial de un camino $P$ como 
+\[b(P)=\text{M\'axima longitud $\ell$ de una arista de $P$}\]
+y para dos v\'ertices $u$ y $v$ defina la distancia-especial $m(s,v)$ como
+\[m(s,v)=\min\{b(P): \text{$P$ es un camino desde $s$ hasta $v$ en $G$}\}\]
+\begin{enumerate}
+\item Calcule $m(s,v)$ para todo $v\in V$ para el grafo $[M3]$ de clase.
+\item Proponga una variante del algoritmo de Dijkstra para calcular las distancias especiales $m(s,v)$ para $v\in V(G)$.
+\begin{enumerate}
+\item Demuestre la validez del algoritmo que propone.
+\item Proponga una implementación que corra en tiempo $O(mn)$ justificando de manera precisa su cálculo del tiempo de ejecución.
+\end{enumerate}
+\end{enumerate}
+
+
+\item Sea $G$ un \'arbol binario. Demuestre las siguientes afirmaciones:
+\begin{enumerate}
+\item Si $G$ tiene los primeros $q$ niveles completamente llenos entonces tiene $2^{q}-1$ v\'ertices.
+\item Ponemos las entradas de un arreglo de longitud $n$ llenando un \'arbol binario  de izquierda a derecha (note que es posible que el último nivel del \'arbol no quede completamente lleno). Muestre que el número de niveles del \'arbol es $\Theta(\log(n))$ donde $\log$ denota el logaritmo natural (en base $e$) de $n$.
+\end{enumerate} 
+
 \end{enumerate}
 
 \end{document}
