@@ -44,34 +44,37 @@
 \title{Pr\'actico 3 ALGABO: El algoritmo de Dijkstra de caminos m\'as cortos con pesos no negativos.}
 \author{Mauricio Velasco}
 \maketitle{}
+
+
+
 \begin{enumerate} 
 
-\item Sea $G$ un grafo dirigido con pesos positivos $\ell$ en las aristas y sea $t$ un v\'ertice de $G$:
+\item Sea $G$ un grafo dirigido con pesos no negativos $\ell\geq 0$ en las aristas y sea $t$ un v\'ertice de $G$:
 \begin{enumerate}
 \item  Proponga una variante del algoritmo de Dijkstra para calcular las distancias {\bf hasta } $t$, es decir los valores $d_{\ell}(v,t)$ para $v\in V(G)$. 
-\item Demuestre que su algoritmo es correcto.
+\item Demuestre formalmente que su algoritmo es correcto (es decir escriba un enunciado de Teorema claro y una demostración del mismo).
 \end{enumerate}
 
 \item Implemente el algoritmo de Dijkstra en python dos veces, una vez usando un \verb!priority_queue! o \verb!heap! (por ejemplo usando \verb!import heapq!) y la segunda vez sin usar esta estructura de datos especial.
 \begin{enumerate}
 \item Escriba el c\'odigo de sus dos implementaciones.
-\item Ejecute sus algoritmos en el ejemplo $[M3]$ y escriba en qu\'e orden se incluyen los v\'ertices en el conjunto $X$.
-\item Ejecute sus implementaciones en ejemplos construidos por uds. de grafos grandes y lleve sus implementaciones hasta el l\'imite. Es cierto en la pr\'actica que usar el heap es mejor que no usarlo? Explique qu\'e ejemplos de grafos utiliz\'o y escriba una tabla con sus conclusiones.
+\item Ejecute sus algoritmos en el ejemplo $[M3]$ y escriba en qu\'e orden se incluyen los v\'ertices en el conjunto $X$ definido en clase.
+\item Ejecute sus implementaciones en ejemplos construidos por uds. de grafos grandes y lleve sus implementaciones hasta el l\'imite. Es cierto en la pr\'actica que usar el heap es mejor que no usarlo? Explique en palabras qu\'e ejemplos de grafos utiliz\'o y escriba una tabla reportando los tiempos de cómputo de ambas implementaciones en sus ejemplos.
 \end{enumerate}
 
-\item Verdadero \'o Falso? En el primer caso escriba una demostraci\'on y en el segundo encuentre un contrajemplo: {\it Suponga que el algoritmo de Dijkstra iniciando en $s$ inserta los v\'ertices de $V(G)$ en $X$ en orden  $s=v_0,v_1,\dots, v_n$. Si $i<j$ entonces $d_{\ell}(s,v_i)\leq d_{\ell}(s,v_j)$.}
+\item Decida si la siguiente afirmación es Verdadera o Falsa. En el primer caso escriba una demostraci\'on y en el segundo encuentre un contrajemplo: {\it Suponga que el algoritmo de Dijkstra iniciando en $s$ inserta los v\'ertices de $V(G)$ en el conjunto $X$(definido en clase) en orden  $s=v_0,v_1,\dots, v_n$. Si $i<j$ entonces $d_{\ell}(s,v_i)\leq d_{\ell}(s,v_j)$.}
 
 
-\item Sea $G$ un grafo dirigido con pesos no negativos. Defina el costo-especial de un camino $P$ como 
+\item Sea $G$ un grafo dirigido con pesos no negativos y sea $s$ un vértice fijo dado. Defina el costo-especial de un camino $P$ como 
 \[b(P)=\text{M\'axima longitud $\ell$ de una arista de $P$}\]
-y para dos v\'ertices $u$ y $v$ defina la distancia-especial $m(s,v)$ como
+y para dos v\'ertices $s$ y $v$ defina la distancia-especial $m(s,v)$ como
 \[m(s,v)=\min\{b(P): \text{$P$ es un camino desde $s$ hasta $v$ en $G$}\}\]
 \begin{enumerate}
 \item Calcule $m(s,v)$ para todo $v\in V$ para el grafo $[M3]$ de clase.
 \item Proponga una variante del algoritmo de Dijkstra para calcular las distancias especiales $m(s,v)$ para $v\in V(G)$.
 \begin{enumerate}
-\item Demuestre la validez del algoritmo que propone.
-\item Proponga una implementación que corra en tiempo $O(mn)$ justificando de manera precisa su cálculo del tiempo de ejecución.
+\item Demuestre la validez del algoritmo que propone (es decir escriba un enunciado de Teorema de validez claro y una demostración del mismo).
+\item Proponga una implementación que corra en tiempo $O(mn)$ o mejor, justificando de manera precisa su cálculo del tiempo de ejecución.
 \end{enumerate}
 \end{enumerate}
 

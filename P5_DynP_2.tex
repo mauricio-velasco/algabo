@@ -1,0 +1,95 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=cyan,
+}
+\urlstyle{same}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\newtheorem{theorem}{Teorema.}
+\newtheorem{lemma}[theorem]{Lema.}
+\newtheorem{corollary}[theorem]{Corolario.}
+\newtheorem{definition}[theorem]{Definici\'on:}
+\newtheorem{example}[theorem]{Ejemplo:}
+\newtheorem{problema}[theorem]{Problema:}
+\newtheorem{remark}[theorem]{Observaci\'on:}
+
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+%\usetheme{default}
+
+\newcommand{\pp}{\mathbb{P}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\qq}{\mathbb{Q}}
+
+\usepackage{tikz, tikz-3dplot}
+
+\definecolor{cof}{RGB}{219,144,71}
+\definecolor{pur}{RGB}{186,146,162}
+\definecolor{greeo}{RGB}{91,173,69}
+\definecolor{greet}{RGB}{52,111,72}
+
+\date{}
+
+\begin{document}
+\title{Pr\'actico 5 ALGABO: Más ejercicios de programaci\'on dinámica.}
+\author{Mauricio Velasco}
+\maketitle{}
+\begin{enumerate} 
+\item {\bf Alineación de secuencias.} Ejecute a mano el método de programación dinámica para encontrar la mejor alineación entre las secuencias $GATTACA$ y $TAGGACA$ asumiendo que un gap tiene costo $+1$ y $\alpha_{xy}=+3$ para $x\neq y$. Calcule la penalidad mínima y exhiba una alineación que alcance ese mínimo.
+
+\item {\bf Como cortar un tubo?} Tenemos longitudes (enteras positivas) $\ell_1<\dots< \ell_k$ deseadas y precios fijos (reales positivos) $p_1,\dots, p_k$ para esas longitudes. Queremos cortar un tubo de longitud $L$ (entera) en piezas de las longitudes $\ell_i$ de tal forma que se maximice la ganancia.  
+\begin{enumerate}
+\item Formule la pregunta como un problema de optimización (Queremos determinar el número $x_i$ de piezas de longitud $\ell_i$ a ser cortadas). 
+\item Proponga un algoritmo de programación dinámica para resolver este problema. Formule y demuestre su ecuación de Bellman.
+\item Describa un espacio de estados para el problema.
+\item Implemente su algoritmo y aplíquelo para resolver el problema con longitudes $[1,2,3,4,5,6]$ y precios respectivos $[1, 5, 9, 12, 12, 15]$ para un tubo de longitud $10$.
+\end{enumerate}
+
+
+
+\item {\bf Árboles de búsqueda.} Considere la siguiente tabla de números y probabilidades respectivas
+\[
+\begin{tabular}{c|c|c|c|c|c|c|c|c}
+\text{valor} & 1 & 2 & 3 & 4 & 5 & 6 & 7\\
+\hline
+\text{probabilidad} & 0.5 & 0.25 & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 \\ 
+\end{tabular}
+\]
+implemente un algoritmo de programación dinámica para encontrar el árbol de búsqueda óptimo para estos números.
+\begin{enumerate}
+\item Dibuje el árbol \'optimo resultante
+\item Calcule el tiempo esperado de búsqueda para su árbol óptimo.
+\item Dibuje el árbol binario lleno con items $[7,6,5,4,3,2,1]$ (usando la notación de la clase sobre heaps) y calcule el tiempo esperado de búsqueda para ese árbol con las probabilidades de arriba.
+\end{enumerate}
+
+\item Dadas matrices $A_1,\dots, A_n$ de tama\~nos $a_i\times a_{i+1}$ para $i=1,\dots,n$ queremos calcular su producto $A_1\dots A_n$.
+\begin{enumerate}
+\item Demuestre las siguientes afirmaciones:\begin{enumerate}
+\item  El resultado del producto no depende de cómo asociemos las matrices es decir $(A_1A_2)A_3=A_1(A_2A_3)$
+\item El n\'umero de operaciones necesarias (sumas y multiplicaciones) para calcular el producto $A_1A_2$ mediante la fórmula usual es $O(a_1a_2a_3)$.
+\end{enumerate}
+\item Aunque el resultado no depende de como asociamos la matrices, el numero de operaciones realizadas SI depende de como las asociamos. Encuentre tres matrices concretas $A_1,A_2$ y $A_3$ donde el cálculo de $(A_1A_2)A_3$ requiera mil veces el número de operaciones usadas para calcular $A_1(A_2A_3)$. 
+\item Demuestre que hay una correspondencia entre maneras de asociar (poner paréntesis) el producto de nuestras $n$ matrices y árboles binarios con $n$ hojas. Escriba todas las maneras de asociar $n=4$ matrices con sus árboles binarios correspondientes.
+\end{enumerate}
+
+\item Proponga un algoritmo usando programación dinámica para encontrar la manera de asociar más eficiente (la que usa el mínimo número de operaciones) para calcular el producto $A_1\dots A_n$ de las matrices del ejercicio anterior.
+\begin{enumerate}
+\item Escriba la ecuación de Bellman de su problema.
+\item Describa el espacio de estados como un grafo con pesos.
+\item Estime el tiempo de ejecución del algoritmo.
+\end{enumerate}
+
+
+\end{enumerate}
+\end{document}
+\item {\bf Tetris} Hay siete tipos de piezas del juego TETRIS (buscar en wikipedia). Formule un algoritmo que use programación dinámica para resolver la siguiente tarea: Dadas cantidades $x_1,x_2,\dots, x_7$ de las siete piezas decida si es posible cubrir un tablero de $10\times n$ con exáctamente esas piezas (en el orden que uds quieran, no en el del juego de tetris). Su algoritmo debe ser polinomial en $n$.    

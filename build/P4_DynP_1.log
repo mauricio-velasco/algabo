@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.5.31)  31 AUG 2023 12:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.5.31)  13 SEP 2023 06:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -668,72 +668,42 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \hbox (4.66113pt too wide) in paragraph at lines 54--55
-[]\OT1/cmr/m/n/12 Utilice la for-mu-la-ci^^Son del pro-ble-ma me-dian-te pro-gr
-a-ma-ci^^Son din^^Sami-
- []
-
-
-Overfull \hbox (1.32909pt too wide) in paragraph at lines 65--66
-[]\OT1/cmr/m/n/12 Verdadero ^^So Fal-so? El al-go-rit-mo pro-pues-to per-mi-te 
-en-con-trar $^^C(\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 )$
- []
-
-[1
+) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-
-! LaTeX Error: \begin{enumerate} on input line 47 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.89 \end{document}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 89.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 89.
-(build/P4_DynP_1.aux
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 93.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 93.
+ (build/P4_DynP_1.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 89.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 89.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 93.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 93.
 Package rerunfilecheck Info: File `P4_DynP_1.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 89.
- )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 47 (\begingroup)
-### bottom level 
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 93.
+ ) 
 Here is how much of TeX's memory you used:
  18395 strings out of 481239
  344228 string characters out of 5920377
- 592272 words of memory out of 5000000
+ 592271 words of memory out of 5000000
  33284 multiletter control sequences out of 15000+600000
  541180 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,7n,60p,561b,500s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbol
-s/msbm10.pfb>
-Output written on build/P4_DynP_1.pdf (2 pages, 125665 bytes).
+ 60i,7n,60p,576b,502s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on build/P4_DynP_1.pdf (2 pages, 127155 bytes).
 PDF statistics:
  87 PDF objects out of 1000 (max. 8388607)
  69 compressed objects within 1 object stream
