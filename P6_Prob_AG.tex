@@ -1,0 +1,89 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=cyan,
+}
+\urlstyle{same}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\newtheorem{theorem}{Teorema.}
+\newtheorem{lemma}[theorem]{Lema.}
+\newtheorem{corollary}[theorem]{Corolario.}
+\newtheorem{definition}[theorem]{Definici\'on:}
+\newtheorem{example}[theorem]{Ejemplo:}
+\newtheorem{problema}[theorem]{Problema:}
+\newtheorem{remark}[theorem]{Observaci\'on:}
+
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+%\usetheme{default}
+
+\newcommand{\pp}{\mathbb{P}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\qq}{\mathbb{Q}}
+
+\usepackage{tikz, tikz-3dplot}
+
+\definecolor{cof}{RGB}{219,144,71}
+\definecolor{pur}{RGB}{186,146,162}
+\definecolor{greeo}{RGB}{91,173,69}
+\definecolor{greet}{RGB}{52,111,72}
+
+\date{}
+
+\begin{document}
+\title{Pr\'actico 6 ALGABO: Algoritmos probabilísticos y algoritmos genéticos.}
+\author{Mauricio Velasco}
+\maketitle{}
+\begin{enumerate}
+\item ({\it Estadística en el problema de selección de secretarie}) Implemente el Algoritmo de generación de permutaciones uniforme mediante sorting en $S_n$ que vimos en clase. 
+\begin{enumerate}
+\item Escriba el código de su implementación
+\item Para $n=20$ candidatos genere una muestra de $m=100$ permutaciones y escriba las $5$ primeras y las $5$ últimas permutaciones de su muestra.
+\item En las permutaciones obtenidas en el punto anterior, marque los candidatos que la firma debería contratar, si el ranqueo de candidatos esta dado por tales permutaciones (en el problema de selección de asistente que vimos en clase).
+\item Escriba el código de un programa que reciba una permutación y calcule el número de candidatos que la firma debería contratar en el problema de selección de asistente que vimos en clase).
+\item Para muestras de $m=100,m=500$ y $m=1000$ permutaciones haga un dibujo que contenga, en un solo par de ejes:
+\begin{enumerate}
+\item Un histograma del número de contrataciones  realizadas en cada permutación de su muestra (ver por ejemplo \url{https://www.w3schools.com/python/matplotlib_histograms.asp})
+\item Una recta vertical en el valor teórico que vimos en clase.
+\item Una recta vertical en el número promedio de contrataciones realizadas.
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+\item ({\it Puntos fijos en permutaciones aleatorias}) Recuerde que los puntos fijos de una permutación $\sigma\in S_n$ son aquellos índices $i\in \{1,\dots, n\}$ con $\sigma(i)=i$.
+\begin{enumerate}
+\item Para un entero $j$ cualquiera defina la variable aleatoria $Y^{(j)}:S_n\rightarrow \RR$ dada por
+\[Y^{(j)}(\sigma)=
+\begin{cases}
+1\text{, si $\sigma(j)=j$}\\
+0\text{, de lo contrario}
+\end{cases}
+\]
+Si $\mathbb{P}$ es la medida de probabilidad uniforme en $S_n$, calcule $\EE[Y^{(j)}]$ dando un argumento preciso para su respuesta.
+\item Use la parte $(a)$ para calcular el número esperado de puntos fijos de una permutación aleatoria de $S_n$, elegida uniformemente.
+\end{enumerate}
+
+\item ({\it Un algoritmo genético innecesario}) Sea $X$ el conjunto de cadenas binarias de longitud $5$. Cada cadena de estas es la representación binaria de un número entero entre $0$ y $32$ inclusive. Sea $f(x)=x^3$. Usaremos algoritmos genéticos para maximizar $f$ en $X$.
+\begin{enumerate}
+\item Escriba el código de un algoritmo genético que intente maximizar la función $f(x)$ para $x\in X$. Su código debe incluir funciones de \verb!reproducción!, de \verb!cross-over! y de \verb!mutación! donde la última depende de una probabilidad de mutación $q$ a ser especificada. 
+
+\item Construya una población inicial aleatoria $I_0$ de $4$ cadenas. Ejecute su algortimo un total de $10$ pasos y produzca una sola imagen con las gráficas de los valores mínimo, promedio y máximo de la función objetivo en su población (el eje $x$ de su dibujo es el tiempo y el eje $y$ las unidades de la función objetivo y debe contener tres curvas).
+
+\item Haga el dibujo de la parte $(b)$ quitandole a su algoritmo la fase de \verb!cross-over!. Como cambian sus resultados?
+
+\end{enumerate}
+ 
+\end{enumerate}
+\end{document}
